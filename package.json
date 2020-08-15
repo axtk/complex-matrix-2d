@@ -1,0 +1,35 @@
+{
+  "name": "complex-matrix-2d",
+  "version": "1.0.0",
+  "description": "Two-dimensional matrices of complex numbers",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run test && npm run build:prod",
+    "build:prod": "cross-env NODE_ENV=production npx rollup -c",
+    "build:dev": "cross-env NODE_ENV=development npx rollup -c",
+    "test": "cross-env npx doctest cleanup && npx doctest build ./src/*.js && npx jest && npx doctest cleanup"
+  },
+  "repository": "github:axtk/complex-matrix-2d",
+  "keywords": [
+    "complex",
+    "numbers",
+    "matrix",
+    "matrices"
+  ],
+  "author": "axtk",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@rollup/plugin-babel": "^5.2.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "cross-env": "^7.0.2",
+    "doctest": "github:axtk/doctest",
+    "jest": "^26.4.0",
+    "rollup": "^2.23.1",
+    "rollup-plugin-terser": "^7.0.0"
+  },
+  "dependencies": {
+    "complex": "github:axtk/complex"
+  }
+}
